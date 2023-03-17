@@ -14,6 +14,10 @@ module.exports = {
         // 注意：这里其实是有顺序的，都是从右往左，或者从下往上的，你得先解析了css，再去插入style
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.less$/i,
+        use: ["style-loader", "css-loader", "less-loader"],
+      },
     ],
   },
 };
