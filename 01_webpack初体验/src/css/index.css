@@ -1,4 +1,5 @@
-.myClass{
-    color:red;
+@import './test.css';
+
+.a{
     user-select: none;
 }
