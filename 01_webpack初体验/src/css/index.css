@@ -1,3 +1,4 @@
 .myClass{
-    color:red
+    color:red;
+    user-select: none;
 }
