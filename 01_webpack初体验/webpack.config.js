@@ -44,14 +44,27 @@ module.exports = {
         ],
       },
 
+      // {
+      //   test: /\.(jp?g|svg|gif|png)$/,
+      //   use: [
+      //     {
+      //       loader: "file-loader",
+      //       options: {
+      //         name: "[name].[hash:6].[ext]",
+      //         outputPath: "img",
+      //       },
+      //     },
+      //   ],
+      // },
       {
         test: /\.(jp?g|svg|gif|png)$/,
         use: [
           {
-            loader: "file-loader",
+            loader: "url-loader",
             options: {
               name: "[name].[hash:6].[ext]",
               outputPath: "img",
+              limit: 100 * 1024,
             },
           },
         ],
