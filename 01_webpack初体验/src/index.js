@@ -7,6 +7,7 @@ const createDiv = () => {
   div.innerHTML = ["hello", "webpack"].join(" ");
   div.className = "myClass";
   div.className = "content";
+
   return div;
 };
 
@@ -34,3 +35,12 @@ const createBackground = () => {
 };
 
 document.body.appendChild(createBackground());
+
+// iconfont
+const createIcon = () => {
+  const icon = document.createElement("i");
+  icon.className = "iconfont icon-home-filling myFont";
+  return icon;
+};
+
+document.body.appendChild(createIcon());

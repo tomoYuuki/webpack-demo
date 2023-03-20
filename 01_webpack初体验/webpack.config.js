@@ -55,6 +55,13 @@ module.exports = {
           filename: "img/[name].[hash:6][ext]",
         },
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "font/[name].[hash:6][ext]",
+        },
+      },
     ],
   },
 };
