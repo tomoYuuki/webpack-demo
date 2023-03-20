@@ -7,7 +7,7 @@ const {DefinePlugin} = require("webpack");
 module.exports = {
   entry: "./src/common_index.js",
   mode: "development",
-  devtool: "source-map",
+  devtool: "cheap-source-map",
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "js/bundle.js",
