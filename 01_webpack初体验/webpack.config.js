@@ -3,12 +3,13 @@ const path = require("path");
 // const {CleanWebPackPlugin} = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const {DefinePlugin} = require("webpack");
+const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
   entry: "./src/index.js",
   mode: "production",
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    path: path.resolve(__dirname, "build"),
+    filename: "js/bundle.js",
     clean: true,
     // assetModuleFilename: "[name].[hash:6][ext]",// 全局，所有的资源模块文件统一修改
   },
@@ -77,6 +78,17 @@ module.exports = {
     }),
     new DefinePlugin({
       BASE_URL: '"./"',
+    }),
+    new CopyPlugin({
+      // to可以不写，会默认跟output的path一样
+      patterns: [
+        {
+          from: "public",
+          globOptions: {
+            ignore: ["**/index.html", "**/.DS_Store"], // 这里必须这么写，详情看https://webpack.docschina.org/plugins/copy-webpack-plugin#root
+          },
+        },
+      ],
     }),
   ],
 };
