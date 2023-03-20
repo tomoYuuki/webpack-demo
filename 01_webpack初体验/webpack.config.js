@@ -5,6 +5,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
+    // assetModuleFilename: "[name].[hash:6][ext]",// 全局，所有的资源模块文件统一修改
   },
   module: {
     rules: [
@@ -38,36 +39,21 @@ module.exports = {
               // 2 => postcss-loader, sass-loader
             },
           },
-
           "less-loader",
           "postcss-loader",
         ],
       },
-
-      // {
-      //   test: /\.(jp?g|svg|gif|png)$/,
-      //   use: [
-      //     {
-      //       loader: "file-loader",
-      //       options: {
-      //         name: "[name].[hash:6].[ext]",
-      //         outputPath: "img",
-      //       },
-      //     },
-      //   ],
-      // },
       {
         test: /\.(jp?g|svg|gif|png)$/,
-        use: [
-          {
-            loader: "url-loader",
-            options: {
-              name: "[name].[hash:6].[ext]",
-              outputPath: "img",
-              limit: 100 * 1024,
-            },
+        type: "asset",
+        parser: {
+          dataUrlCondition: {
+            maxSize: 100 * 1024, // 200kb 取代了file-loader的limit
           },
-        ],
+        },
+        generator: {
+          filename: "img/[name].[hash:6][ext]",
+        },
       },
     ],
   },

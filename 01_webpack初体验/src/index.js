@@ -1,7 +1,7 @@
 import "./css/index.css";
 import "./css/base.less";
 
-import pic2 from "./img/2.png";
+import pic2 from "./img/1.png";
 const createDiv = () => {
   const div = document.createElement("div");
   div.innerHTML = ["hello", "webpack"].join(" ");
@@ -15,7 +15,8 @@ document.body.appendChild(createDiv());
 // 图片资源
 const createImage = () => {
   const img = new Image();
-  img.src = require("../src/img/2.png").default;
+  // 使用type:asset后 就不需要default了
+  img.src = require("../src/img/2.png");
   return img;
 };
 document.body.appendChild(createImage());
