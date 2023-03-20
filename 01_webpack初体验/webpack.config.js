@@ -1,10 +1,14 @@
 const path = require("path");
+
+// const {CleanWebPackPlugin} = require("clean-webpack-plugin");
+
 module.exports = {
   entry: "./src/index.js",
   mode: "production",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
+    clean: true,
     // assetModuleFilename: "[name].[hash:6][ext]",// 全局，所有的资源模块文件统一修改
   },
   module: {
@@ -64,4 +68,7 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    // new CleanWebPackPlugin()
+  ],
 };
