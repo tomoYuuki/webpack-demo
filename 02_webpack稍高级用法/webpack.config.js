@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const {DefinePlugin} = require("webpack");
 
 module.exports = {
-  entry: "./src/react_index.js",
+  entry: "./src/main.ts",
   mode: "development",
   devtool: "cheap-source-map",
   output: {
@@ -78,6 +78,12 @@ module.exports = {
           // options: {
           //   presets: ["@babel/preset-env"], // 试了一下50版本都支持es6了 40多才不支持；
           // },
+        },
+      },
+      {
+        test: /\.ts$/,
+        use: {
+          loader: "ts-loader",
         },
       },
     ],
