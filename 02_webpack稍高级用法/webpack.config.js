@@ -83,7 +83,8 @@ module.exports = {
       {
         test: /\.ts$/,
         use: {
-          loader: "ts-loader",
+          // loader: "ts-loader",
+          loader: "babel-loader", // 使用babel-loader替代ts-loader，结合@babel/preset-typescript预设，可以支持promise了
         },
       },
     ],

@@ -14,6 +14,7 @@ const presets = [
     },
   ],
   ["@babel/preset-react"],
+  ["@babel/preset-typescript"], // babel预设帮忙
 ];
 
 module.exports = {presets};
