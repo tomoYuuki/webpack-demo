@@ -1,3 +1,5 @@
-export function say(str) {
+function say(str) {
   console.log(str);
 }
+
+export { say };

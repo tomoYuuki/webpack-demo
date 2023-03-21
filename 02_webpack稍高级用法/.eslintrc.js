@@ -12,6 +12,8 @@ module.exports = {
   plugins: ['vue'],
   rules: {
     'no-console': 0,
+    'import/no-extraneous-dependencies': 0,
+    'import/prefer-default-export': 0,
     // 'prettier/prettier': 'error', // 开启规则
     // 'prettier/prettier': [
     //   'warn',

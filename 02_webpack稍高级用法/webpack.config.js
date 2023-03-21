@@ -3,9 +3,11 @@ const path = require('path');
 // const {CleanWebPackPlugin} = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { DefinePlugin } = require('webpack');
+const { VueLoaderPlugin } = require('vue-loader');
+// const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/main.js',
   mode: 'development',
   devtool: 'cheap-source-map',
   output: {
@@ -87,9 +89,14 @@ module.exports = {
           loader: 'babel-loader', // 使用babel-loader替代ts-loader，结合@babel/preset-typescript预设，可以支持promise了
         },
       },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+      },
     ],
   },
   plugins: [
+    new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       title: 'yk demo',
       template: './index.html',
