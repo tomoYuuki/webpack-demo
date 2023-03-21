@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const {DefinePlugin} = require("webpack");
 
 module.exports = {
-  entry: "./src/common_index.js",
+  entry: "./src/react_index.js",
   mode: "development",
   devtool: "cheap-source-map",
   output: {
@@ -85,6 +85,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "yk demo",
+      template: "./index.html",
     }),
     new DefinePlugin({
       BASE_URL: '"./"',
