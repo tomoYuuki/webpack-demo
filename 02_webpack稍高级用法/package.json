@@ -4,7 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "type-check-watch": "tsc --noEmit --watch"
   },
   "author": "",
   "license": "ISC",
