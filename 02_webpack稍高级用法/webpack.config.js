@@ -71,7 +71,7 @@ module.exports = {
       // },
       {
         test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(node_modules|bower_components)/, // 第三方库有可能已经自己使用了polyfill，给它排除，就不会有兼容问题
         use: {
           loader: "babel-loader",
           // 使用babel.config.js取代了

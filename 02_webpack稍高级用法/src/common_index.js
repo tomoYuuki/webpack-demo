@@ -7,4 +7,8 @@ const func = () => {
   console.log("say");
 };
 
+const fn = new Promise((resolve, reject) => {
+  console.log("Promise");
+});
+console.log(fn);
 func();
