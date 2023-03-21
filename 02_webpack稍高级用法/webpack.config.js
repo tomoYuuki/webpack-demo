@@ -74,9 +74,10 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env"], // 试了一下50版本都支持es6了 40多才不支持
-          },
+          // 使用babel.config.js取代了
+          // options: {
+          //   presets: ["@babel/preset-env"], // 试了一下50版本都支持es6了 40多才不支持；
+          // },
         },
       },
     ],
