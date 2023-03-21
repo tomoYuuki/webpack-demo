@@ -1,16 +1,16 @@
-const path = require("path");
+const path = require('path');
 
 // const {CleanWebPackPlugin} = require("clean-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const {DefinePlugin} = require("webpack");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { DefinePlugin } = require('webpack');
 
 module.exports = {
-  entry: "./src/main.ts",
-  mode: "development",
-  devtool: "cheap-source-map",
+  entry: './src/index.js',
+  mode: 'development',
+  devtool: 'cheap-source-map',
   output: {
-    path: path.resolve(__dirname, "build"),
-    filename: "js/bundle.js",
+    path: path.resolve(__dirname, 'build'),
+    filename: 'js/bundle.js',
     clean: true,
     // assetModuleFilename: "[name].[hash:6][ext]",// 全局，所有的资源模块文件统一修改
   },
@@ -73,7 +73,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/, // 第三方库有可能已经自己使用了polyfill，给它排除，就不会有兼容问题
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           // 使用babel.config.js取代了
           // options: {
           //   presets: ["@babel/preset-env"], // 试了一下50版本都支持es6了 40多才不支持；
@@ -84,15 +84,15 @@ module.exports = {
         test: /\.ts$/,
         use: {
           // loader: "ts-loader",
-          loader: "babel-loader", // 使用babel-loader替代ts-loader，结合@babel/preset-typescript预设，可以支持promise了
+          loader: 'babel-loader', // 使用babel-loader替代ts-loader，结合@babel/preset-typescript预设，可以支持promise了
         },
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "yk demo",
-      template: "./index.html",
+      title: 'yk demo',
+      template: './index.html',
     }),
     new DefinePlugin({
       BASE_URL: '"./"',
