@@ -10,8 +10,9 @@ module.exports = {
     hot: true, // 热更新开启
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    path: path.resolve(__dirname, "./build"),
+    filename: "js/bundle.js",
+    publicPath: "./", // html中 js/bundle.js  => ./js/bundle.js
   },
   module: {
     rules: [

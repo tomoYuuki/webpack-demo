@@ -11,10 +11,11 @@ export default {
       message: "Hello Vue2",
     };
   },
-  computed: {},
-  watch: {},
   created() {},
   mounted() {},
+  computed: {},
+  watch: {},
+
   beforeDestroy() {},
   methods: {},
 };
