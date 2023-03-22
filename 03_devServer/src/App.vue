@@ -1,21 +1,21 @@
 <template>
-  <div>{{ message }}</div>
+  <div>{{ this.message }}</div>
 </template>
 <script>
 export default {
-  name: 'App',
+  name: "App",
   components: {},
   props: {},
   data() {
     return {
-      message: 'hello world',
+      message: "Hello Vue2",
     };
   },
   computed: {},
   watch: {},
   created() {},
   mounted() {},
-  beforeUnmount() {},
+  beforeDestroy() {},
   methods: {},
 };
 </script>
