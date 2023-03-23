@@ -21,12 +21,13 @@ module.exports = {
 
         //但是这里并不是接口真正的路径，还需要重写 api 变成 空 那么就变成了 localhost:3000/login，就访问到了真正的接口
         pathRewrite: {
-          "/api": "",
+          "/api": "", // 补充一下 "^/api" 就是以/开头 ，后续是api
         },
         secure: false, // 不验证https
         changeOrigin: true, // 服务器因为可能会防止人通过代理去爬服务器信息，看看来源是否是 服务器指定的来源，加上这个后就会修改这个源，就不会被拦
       },
     },
+    historyApiFallback: true, //在开发时， 直接访问localhost:8080/about的时候其实是拿不到页面的，配置了他就会给你去拿
   },
 
   output: {
