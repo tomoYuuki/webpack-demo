@@ -29,6 +29,9 @@ module.exports = {
     },
     historyApiFallback: true, //在开发时， 直接访问localhost:8080/about的时候其实是拿不到页面的，配置了他就会给你去拿
   },
+  resolve: {
+    modules: [path.resolve(__dirname, "a_yuuki_modules"), "node_modules"],
+  },
 
   output: {
     path: path.resolve(__dirname, "./build"),
