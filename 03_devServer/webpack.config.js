@@ -32,6 +32,11 @@ module.exports = {
   resolve: {
     modules: [path.resolve(__dirname, "a_yuuki_modules"), "node_modules"],
     extensions: [".js", ".json", ".wasm", ".css"],
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+      css: path.resolve(__dirname, "./src/css"),
+      // "@css": path.resolve(__dirname, "./src/css"),
+    },
   },
 
   output: {
