@@ -8,7 +8,7 @@ module.exports = {
   devServer: {
     port: 9000, // 设置端口
     hot: true, // 热更新开启
-    open: true, // 编译成功后自动打开浏览器
+    // open: true, // 编译成功后自动打开浏览器
     // host: "0.0.0.0", // 如果你想让你的服务器可以被外部访问，像这样指定，默认就是localhost
     compress: true, // 可以打个包，变成gzip，体积小了
     devMiddleware: {
@@ -31,6 +31,7 @@ module.exports = {
   },
   resolve: {
     modules: [path.resolve(__dirname, "a_yuuki_modules"), "node_modules"],
+    extensions: [".js", ".json", ".wasm", ".css"],
   },
 
   output: {
@@ -40,6 +41,10 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
       {
         test: /\.vue$/,
         use: ["vue-loader"],

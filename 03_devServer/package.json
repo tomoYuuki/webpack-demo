@@ -12,7 +12,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^6.7.3",
     "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.2",
     "vue-loader": "^15.0.0",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^5.76.2",

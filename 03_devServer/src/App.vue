@@ -1,5 +1,8 @@
 <template>
-  <div>{{ this.message }}</div>
+  <div>
+    <div class="common">{{ this.message }}</div>
+    <div class="common-index">芜湖</div>
+  </div>
 </template>
 <script>
 export default {
