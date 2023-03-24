@@ -11,7 +11,15 @@ const {resolveApp} = require("../utils/paths.js");
 
 let commonConfig = {
   context: path.resolve(__dirname, "../"), // 确定哪个目录是相对的目录，这里值的就是当前目录的上一层
-  entry: "./src/main.js", // 这里为什么是./src/main.js，因为context配置默认是在整个项目的根目录
+  entry: {
+    main: "./src/main.js",
+    index: "./src/index.js",
+  },
+  output: {
+    path: resolveApp("./build"),
+    filename: "[name].bundle.js",
+    publicPath: "/yk-path", // html中 js/bundle.js  => ./js/bundle.js ,script引入打包后的包前面会加的路径，最好和devServer的一样
+  },
   resolve: {
     modules: [path.resolve(__dirname, "a_yuuki_modules"), "node_modules"],
     extensions: [".js", ".json", ".wasm", ".css"],
