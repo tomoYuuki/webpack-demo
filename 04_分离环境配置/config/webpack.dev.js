@@ -7,7 +7,7 @@ module.exports = {
     // host: "0.0.0.0", // 如果你想让你的服务器可以被外部访问，像这样指定，默认就是localhost
     compress: true, // 可以打个包，变成gzip，体积小了
     devMiddleware: {
-      publicPath: "/yk-path", // 配置本地服务的基础路径 localhost:8080 ${publicPath} ...
+      // publicPath: "/yk-path", // 配置本地服务的基础路径 localhost:8080 ${publicPath} ...
     },
     proxy: {
       "/api": {

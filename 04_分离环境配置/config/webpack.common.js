@@ -18,7 +18,8 @@ let commonConfig = {
   output: {
     path: resolveApp("./build"),
     filename: "[name].bundle.js",
-    publicPath: "/yk-path", // html中 js/bundle.js  => ./js/bundle.js ,script引入打包后的包前面会加的路径，最好和devServer的一样
+    // publicPath: "/yk-path", // html中 js/bundle.js  => ./js/bundle.js ,script引入打包后的包前面会加的路径，最好和devServer的一样
+    publicPath: "https://yuuki.com/cdn", // html中 js/bundle.js  => ./js/bundle.js ,script引入打包后的包前面会加的路径，最好和devServer的一样
   },
   resolve: {
     modules: [path.resolve(__dirname, "a_yuuki_modules"), "node_modules"],

@@ -3,4 +3,4 @@ function add() {
   return 2;
 }
 
-export default add;
+// export default add;
