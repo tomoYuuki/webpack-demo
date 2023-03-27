@@ -6,7 +6,9 @@ const path = require("path");
 
 module.exports = {
   mode: "production",
-
+  externals: {
+    dayjs: "dayjs",
+  },
   plugins: [
     new CleanWebpackPlugin(), // 生产用
   ],

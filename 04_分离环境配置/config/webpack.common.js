@@ -29,9 +29,6 @@ let commonConfig = {
       // "@css": path.resolve(__dirname, "./src/css"),
     },
   },
-  externals: {
-    dayjs: "dayjs",
-  },
   optimization: {
     splitChunks: {
       chunks: "all",

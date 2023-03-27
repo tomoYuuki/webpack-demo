@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "serve": "webpack serve",
-    "serve2": "webpack serve --config ./config/webpack.common.js --env development",
+    "serve2": "webpack --config ./config/webpack.common.js --env development",
     "build2": "webpack --config ./config/webpack.common.js --env production"
   },
   "keywords": [],
