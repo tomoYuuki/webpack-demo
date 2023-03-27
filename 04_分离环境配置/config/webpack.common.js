@@ -29,6 +29,11 @@ let commonConfig = {
       // "@css": path.resolve(__dirname, "./src/css"),
     },
   },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
+  },
   module: {
     rules: [
       {
