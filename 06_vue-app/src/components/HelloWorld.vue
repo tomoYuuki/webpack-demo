@@ -15,8 +15,8 @@
           href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
           target="_blank"
           rel="noopener"
-          >babel</a
-        >
+          >babel
+        </a>
       </li>
       <li>
         <a
@@ -55,8 +55,8 @@
     <ul>
       <li>
         <a href="https://router.vuejs.org" target="_blank" rel="noopener"
-          >vue-router</a
-        >
+          >vue-router
+        </a>
       </li>
       <li>
         <a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a>
@@ -71,8 +71,8 @@
       </li>
       <li>
         <a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener"
-          >vue-loader</a
-        >
+          >vue-loader
+        </a>
       </li>
       <li>
         <a
@@ -88,11 +88,11 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: 'HelloWorld',
   props: {
-    msg: String,
-  },
-};
+    msg: String
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
